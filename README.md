@@ -1,1 +1,0 @@
-# Interview_Preparation_C
