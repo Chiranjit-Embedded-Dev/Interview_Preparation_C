@@ -210,3 +210,28 @@
 // }
 
 
+#include <stdio.h>
+
+int call_by_valu(int x)
+{
+    x = 20;
+
+    return 0;
+}
+
+int call_by_referance(int *y)
+{
+    *y = 30;
+
+    return 0;
+}
+
+int main()
+{
+    int a=0 ;
+    int b = 90;
+    call_by_valu(a);
+    call_by_referance(&b);
+    printf("Value of a = %d and b=%d", a, b);
+    return 0;
+}
