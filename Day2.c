@@ -17,14 +17,29 @@
 //     printf("Hallo World");
 //     return 0;
 // }
+
+
+// sum of digits using loop
 #include <stdio.h>
+int main()
+{
+    int number =0;
+    int digit=0;
+    int sum=0;
+    printf(" Please Enter a number =");
+    scanf("%d",&number);
 
-void greetUser(char name[]) {
-    printf("Hello, %s!\n", name);
-}
+    while (number!=0)
+    {
+       
+       digit=number % 10;
+       sum +=digit;
+       number=number/10;
 
-int main() {
-    greetUser("Alice");
-    greetUser("Bob");
+       
+        /* code */
+    }
+    printf(" the sum of digit= %d ",sum);
     return 0;
 }
+
