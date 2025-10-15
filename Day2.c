@@ -20,26 +20,48 @@
 
 
 // sum of digits using loop
+// #include <stdio.h>
+// int main()
+// {
+//     int number =0;
+//     int digit=0;
+//     int sum=0;
+//     printf(" Please Enter a number =");
+//     scanf("%d",&number);
+
+//     while (number!=0)
+//     {
+       
+//        digit=number % 10;
+//        sum +=digit;
+//        number=number/10;
+
+       
+//         /* code */
+//     }
+//     printf(" the sum of digit= %d ",sum);
+//     return 0;
+// }
+
 #include <stdio.h>
+
 int main()
 {
-    int number =0;
-    int digit=0;
-    int sum=0;
-    printf(" Please Enter a number =");
-    scanf("%d",&number);
+    int number, digit, reversed = 0;
 
-    while (number!=0)
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    int temp = number; // store original number if needed later
+
+    while (number != 0)
     {
-       
-       digit=number % 10;
-       sum +=digit;
-       number=number/10;
-
-       
-        /* code */
+        digit = number % 10;          // Extract last digit
+        reversed = reversed * 10 + digit; // Build reversed number
+        number = number / 10;         // Remove last digit
     }
-    printf(" the sum of digit= %d ",sum);
+
+    printf("Reversed number: %d\n", reversed);
+
     return 0;
 }
-
