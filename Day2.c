@@ -43,25 +43,50 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+
+// int main()
+// {
+//     int number, digit, reversed = 0;
+
+//     printf("Enter a number: ");
+//     scanf("%d", &number);
+
+//     int temp = number; // store original number if needed later
+
+//     while (number != 0)
+//     {
+//         digit = number % 10;          // Extract last digit
+//         reversed = reversed * 10 + digit; // Build reversed number
+//         number = number / 10;         // Remove last digit
+//     }
+
+//     printf("Reversed number: %d\n", reversed);
+
+//     return 0;
+// }
+
+//Fibonacci Using Loop
 #include <stdio.h>
 
 int main()
 {
-    int number, digit, reversed = 0;
+    int n, t1 = 0, t2 = 1, nextTerm;
 
-    printf("Enter a number: ");
-    scanf("%d", &number);
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
 
-    int temp = number; // store original number if needed later
+    printf("Fibonacci sequence: ");
 
-    while (number != 0)
+    for (int i = 1; i <= n; i++)
     {
-        digit = number % 10;          // Extract last digit
-        reversed = reversed * 10 + digit; // Build reversed number
-        number = number / 10;         // Remove last digit
+        printf("%d ", t1);        // print current term
+        nextTerm = t1 + t2;       // calculate next term
+        t1 = t2;                  // update t1
+        t2 = nextTerm;            // update t2
     }
 
-    printf("Reversed number: %d\n", reversed);
-
+    printf("\n");
     return 0;
 }
+

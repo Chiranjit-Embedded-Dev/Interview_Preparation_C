@@ -1,21 +1,21 @@
-int fun_sumofdigit(int n)
+int fun_revers_number(int n)
 {
-if (n == 0)
-{
-    return 0;//base case
+    int digit;
+    if (n == 0)
+        return 0;
+    else
+        digit = n % 10;
+    printf("%d", digit);
+    return fun_revers_number(n / 10);
 }
-else 
-return (n%10)+fun_sumofdigit(n/10);
-
-}
-
 int main()
 {
-    int num;
-    printf(" Please enter a number =");
-    scanf("%d",&num);
-    int result = fun_sumofdigit(num);
-    printf(" The sum of %d is %d ",num,result);
-    
+    int number;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    printf("Reversed number: ");
+    fun_revers_number(number);
+    printf("\n");
     return 0;
 }

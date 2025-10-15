@@ -49,24 +49,55 @@
 
 // Reverse a Number using Recursion
 
-int fun_revers_number(int n)
+// int fun_revers_number(int n)
+// {
+//     int digit;
+//     if (n == 0)
+//         return 0;
+//     else
+//         digit = n % 10;
+//     printf("%d", digit);
+//     return fun_revers_number(n / 10);
+// }
+// int main()
+// {
+//     int number;
+//     printf("Enter a number: ");
+//     scanf("%d", &number);
+
+//     printf("Reversed number: ");
+//     fun_revers_number(number);
+//     printf("\n");
+//     return 0;
+// }
+
+// Fibonacci Using Recursion
+
+int fun_fibonacci(int n)
 {
-    int digit;
     if (n == 0)
-        return 0;
+        return 0; // base case
+    else if (n == 1)
+    {
+        return 1;
+        /* code */
+    }
     else
-        digit = n % 10;
-    printf("%d", digit);
-    return fun_revers_number(n / 10);
+        return fun_fibonacci(n - 1) + fun_fibonacci(n - 2);
 }
+
 int main()
 {
-    int number;
-    printf("Enter a number: ");
-    scanf("%d", &number);
+    int n;
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
 
-    printf("Reversed number: ");
-    fun_revers_number(number);
+    printf("Fibonacci sequence: ");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", fun_fibonacci(i)); // print each term
+    }
     printf("\n");
+
     return 0;
 }
