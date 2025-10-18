@@ -72,7 +72,7 @@
 //     if (a == b)
 //     {
 //         printf(" \nA = B");
-//     } 
+//     }
 //     if (a != b)
 //     {
 //         printf(" \nA != B");
@@ -88,7 +88,7 @@
 //     if (a >= b)
 //     {
 //         printf(" \nA >= B");
-    
+
 //     }if (a <= b)
 //     {
 //         printf(" \nA <= B");
@@ -98,10 +98,9 @@
 
 // Logical Operators in C
 
-
 // Operator	Meaning	Description
 // &&	Logical AND	True if both conditions are true
-// ||  Logical   OR  True if at least one is true 
+// ||  Logical   OR  True if at least one is true
 // !	Logical NOT	Inverts the condition (true → false, false → true)
 
 #include <stdio.h>
@@ -113,21 +112,18 @@ int main()
     scanf("%d %d", &a, &b);
     printf("A=%d And B=%d\n", a, b);
 
-    if (a>0 && b<a)
+    if (a > 0 && b < a)
     {
-       printf("A && B True\n");
+        printf("A && B True\n");
     }
     else
-    printf("A && B False\n");
-  if (a>0||b<a)
+        printf("A && B False\n");
+    if (a > 0 || b < a)
     {
-       printf("A || B True\n");
+        printf("A || B True\n");
     }
     else
-    printf("A || B False\n");
-
+        printf("A || B False\n");
 
     return 0;
-
-
 }
