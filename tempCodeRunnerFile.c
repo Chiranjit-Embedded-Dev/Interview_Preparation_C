@@ -1,30 +1,9 @@
-                     
-// #include <stdio.h>
-
-// int fibonacci(int n) {
-//     if (n == 0)
-//         return 0;
-//     else if (n == 1)
-//         return 1;
-//     else
-//         return fibonacci(n - 1) + fibonacci(n - 2);
-// }
-
-
+#include <stdio.h>
 // int main()
 // {
-//     int n, i;
-
-//     printf("Enter the number of terms: ");
-//     scanf("%d", &n);
-
-//     printf("Fibonacci Series up to %d terms:\n", n);
-//     for (i = 0; i < n; i++)
-//     {
-//         printf("%d ", fibonacci(i));
-//     }
-
-//     printf("\n");
+//     float Rupee;
+//     printf("Please Ether a amoumt to conver in Rupee to Doller \n");
+//     scanf("%f", &Rupee);
+//     printf("%.2f Rupee = $%.2f Doller", Rupee, 0.011 * Rupee);
 //     return 0;
-
 // }
