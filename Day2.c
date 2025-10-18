@@ -58,15 +58,7 @@
 //     {
 //         digit = number % 10;          // Extract last digit
 //         reversed = reversed * 10 + digit; // Build reversed number
-//         number = number / 10;         // Remove last digit
-//     }
-
-//     printf("Reversed number: %d\n", reversed);
-
-//     return 0;
-// }
-
-//Fibonacci Using Loop
+//         number = number / 10;         // 
 #include <stdio.h>
 
 int main()

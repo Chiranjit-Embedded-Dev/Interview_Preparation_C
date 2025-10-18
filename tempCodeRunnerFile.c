@@ -1,21 +1,30 @@
-int fun_revers_number(int n)
-{
-    int digit;
-    if (n == 0)
-        return 0;
-    else
-        digit = n % 10;
-    printf("%d", digit);
-    return fun_revers_number(n / 10);
-}
-int main()
-{
-    int number;
-    printf("Enter a number: ");
-    scanf("%d", &number);
+                     
+// #include <stdio.h>
 
-    printf("Reversed number: ");
-    fun_revers_number(number);
-    printf("\n");
-    return 0;
-}
+// int fibonacci(int n) {
+//     if (n == 0)
+//         return 0;
+//     else if (n == 1)
+//         return 1;
+//     else
+//         return fibonacci(n - 1) + fibonacci(n - 2);
+// }
+
+
+// int main()
+// {
+//     int n, i;
+
+//     printf("Enter the number of terms: ");
+//     scanf("%d", &n);
+
+//     printf("Fibonacci Series up to %d terms:\n", n);
+//     for (i = 0; i < n; i++)
+//     {
+//         printf("%d ", fibonacci(i));
+//     }
+
+//     printf("\n");
+//     return 0;
+
+// }

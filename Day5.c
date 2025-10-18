@@ -47,57 +47,94 @@
 //     return 0;
 // }
 
-// Reverse a Number using Recursion
+// #include <stdio.h>
 
-// int fun_revers_number(int n)
+// // Recursive function to reverse a number
+// int reverse_number(int n, int rev)
 // {
-//     int digit;
 //     if (n == 0)
-//         return 0;
+//         return rev;   // base case: all digits processed
 //     else
-//         digit = n % 10;
-//     printf("%d", digit);
-//     return fun_revers_number(n / 10);
+//         return reverse_number(n / 10, rev * 10 + n % 10);
 // }
+
 // int main()
 // {
-//     int number;
-//     printf("Enter a number: ");
-//     scanf("%d", &number);
+//     int num, reversed;
 
-//     printf("Reversed number: ");
-//     fun_revers_number(number);
-//     printf("\n");
+//     // Input number from user
+//     printf("Enter a number: ");
+//     scanf("%d", &num);
+
+//     // Call recursive function
+//     reversed = reverse_number(num, 0);
+
+//     // Print the reversed number
+//     printf("Reversed number: %d\n", reversed);
+
 //     return 0;
 // }
 
-// Fibonacci Using Recursion
+// Fibonacci Using Recursion   
+// #include <stdio.h>
 
-int fun_fibonacci(int n)
-{
+// int fibonacci(int n) {
+//     if (n == 0)
+//         return 0;
+//     else if (n == 1)
+//         return 1;
+//     else
+//         return fibonacci(n - 1) + fibonacci(n - 2);
+// }
+
+
+// int main()
+// {
+//     int n, i;
+
+//     printf("Enter the number of terms: ");
+//     scanf("%d", &n);
+
+//     printf("Fibonacci Series up to %d terms:\n", n);
+//     for (i = 0; i < n; i++)
+//     {
+//         printf("%d ", fibonacci(i));
+//     }
+
+//     printf("\n");
+//     return 0;
+
+// }
+
+// #include <stdio.h>
+
+// int sum_natural(int n) {
+//     if (n == 0)
+//         return 0;
+//     else
+//         return n + sum_natural(n - 1);
+// }
+
+// int main() {
+//     int n;
+//     printf("Enter a number: ");
+//     scanf("%d", &n);
+//     printf("Sum of first %d natural numbers: %d\n", n, sum_natural(n));
+//     return 0;
+// }
+#include <stdio.h>
+
+int power(int x, int n) {
     if (n == 0)
-        return 0; // base case
-    else if (n == 1)
-    {
-        return 1;
-        /* code */
-    }
+        return 0;
     else
-        return fun_fibonacci(n - 1) + fun_fibonacci(n - 2);
+        return x * power(x, n - 1);
 }
 
-int main()
-{
-    int n;
-    printf("Enter the number of terms: ");
-    scanf("%d", &n);
-
-    printf("Fibonacci sequence: ");
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ", fun_fibonacci(i)); // print each term
-    }
-    printf("\n");
-
+int main() {
+    int x, n;
+    printf("Enter base and exponent: ");
+    scanf("%d %d", &x, &n);
+    printf("%d^%d = %d\n", x, n, power(x, n));
     return 0;
 }
