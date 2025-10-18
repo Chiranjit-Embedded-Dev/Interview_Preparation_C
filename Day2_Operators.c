@@ -97,6 +97,8 @@
 // }
 
 // Logical Operators in C
+
+
 // Operator	Meaning	Description
 // &&	Logical AND	True if both conditions are true
 // ||  Logical   OR  True if at least one is true 
