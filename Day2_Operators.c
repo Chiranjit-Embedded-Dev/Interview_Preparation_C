@@ -1,4 +1,4 @@
-//Operators 
+// Operators
 
 // 1. Arithmetic Operators
 
@@ -48,3 +48,84 @@
 
 //     return 0;
 // }
+
+// 2. Relational Operators
+
+// Used to compare values. They return 1 (true) or 0 (false).
+
+// Operator	 Meaning	        Example
+// ==	     Equal to	        a == b
+// !=	     Not equal to	    a != b
+// >	     Greater than	    a > b
+// <	     Less than    	    a < b
+// >=	     Greater or equal	a >= b
+// <=	     Less or equal	    a <= b
+
+// #include <stdio.h>
+// int main()
+// {
+//     int a;
+//     int b;
+//     printf("Please Enter a Value for A And B\n");
+//     scanf("%d %d", &a, &b);
+//     printf("A=%d And B=%d", a, b);
+//     if (a == b)
+//     {
+//         printf(" \nA = B");
+//     } 
+//     if (a != b)
+//     {
+//         printf(" \nA != B");
+//     }
+//     if (a > b)
+//     {
+//         printf(" \nA > B");
+//     }
+//     if (a < b)
+//     {
+//         printf(" \nA < B");
+//     }
+//     if (a >= b)
+//     {
+//         printf(" \nA >= B");
+    
+//     }if (a <= b)
+//     {
+//         printf(" \nA <= B");
+//     }
+//     return 0;
+// }
+
+// Logical Operators in C
+// Operator	Meaning	Description
+// &&	Logical AND	True if both conditions are true
+// ||  Logical   OR  True if at least one is true 
+// !	Logical NOT	Inverts the condition (true → false, false → true)
+
+#include <stdio.h>
+int main()
+{
+    int a;
+    int b;
+    printf("Please Enter a Value for A And B\n");
+    scanf("%d %d", &a, &b);
+    printf("A=%d And B=%d\n", a, b);
+
+    if (a>0 && b<a)
+    {
+       printf("A && B True\n");
+    }
+    else
+    printf("A && B False\n");
+  if (a>0||b<a)
+    {
+       printf("A || B True\n");
+    }
+    else
+    printf("A || B False\n");
+
+
+    return 0;
+
+
+}
