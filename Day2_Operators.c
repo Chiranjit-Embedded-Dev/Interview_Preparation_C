@@ -174,15 +174,3 @@
 // | `~`      | NOT (1’s Complement) | Inverts all bits (0 → 1, 1 → 0)                                               |                                                 |
 // | `<<`     | Left Shift           | Shifts bits to the left, filling 0s on the right                              |                                                 |
 // | `>>`     | Right Shift          | Shifts bits to the right, filling 0s on the left (depends on signed/unsigned) |                                                 |
-#include <stdio.h>
-
-int main() {
-    unsigned int a = 5;  // 0101 in binary
-    unsigned int b = 3;  // 0011 in binary
-    unsigned int result;
-
-    result = a | b;      // Bitwise OR
-    printf("a | b = %d\n", result);
-
-    return 0;
-}
