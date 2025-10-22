@@ -31,28 +31,60 @@
 
 // print even number
 
+// #include <stdio.h>
+// int main()
+// {
+
+//     int num;
+//     int flag = 0;
+//     printf("Please enter a number =");
+//     scanf("%d", &num);
+
+//     for (int i = 2; i <= num / 2; i++)
+//     {
+//         if (num % i == 0)
+//         {
+//             flag = 1;
+//         }
+//     }
+
+//     if (flag == 1)
+//     {
+//         printf("Non Prime Number");
+//     }
+//     else
+//         printf("Prime Namber");
+//     return 0;
+// }
+
+// print table
+
+// #include <stdio.h>
+// int main()
+// {
+//     int num;
+//     printf("Please enter a number =");
+//     scanf("%d", &num);
+//     printf("Table of %d is\n", num);
+//     for (int i = 1; i <= 10; i++)
+//     {
+
+//         printf(" %d * %d = %d\n",num, i, (num * i));
+//     }
+
+//     return 0;
+// }
+
+// Print the n turm in AP
 #include <stdio.h>
 int main()
 {
-
     int num;
-    int flag = 0;
     printf("Please enter a number =");
     scanf("%d", &num);
-
-    for (int i = 2; i <= num / 2; i++)
+    for (int i = 4; i <= (4 * num ); i = i + 4)
     {
-        if (num % i == 0)
-        {
-            flag = 1;
-        }
+        printf("%d\n",i);
     }
-
-    if (flag == 1)
-    {
-        printf("Non Prime Number");
-    }
-    else
-        printf("Prime Namber");
     return 0;
 }
