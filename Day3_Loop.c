@@ -76,15 +76,16 @@
 // }
 
 // Print the n turm in AP
-#include <stdio.h>
-int main()
-{
-    int num;
-    printf("Please enter a number =");
-    scanf("%d", &num);
-    for (int i = 4; i <= (4 * num ); i = i + 4)
-    {
-        printf("%d\n",i);
-    }
-    return 0;
-}
+// #include <stdio.h>
+// int main()
+// {
+//     int num;
+//     printf("Please enter a number =");
+//     scanf("%d", &num);
+//     for (int i = 4; i <= (4 * num ); i = i + 4)
+//     {
+//         printf("%d\n",i);
+//     }
+//     return 0;
+// }
+
