@@ -52,34 +52,34 @@
 //         return 0;
 //     }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-void reverse(char str[]) {
-    int i = 0;
-    int j = 0;
+// void reverse(char str[]) {
+//     int i = 0;
+//     int j = 0;
 
-    // Find the length of the string
-    while (str[j] != '\0') {
-        j++;
-    }
-    j--; // Set j to last character
+//     // Find the length of the string
+//     while (str[j] != '\0') {
+//         j++;
+//     }
+//     j--; // Set j to last character
 
-    while (i < j) {
-        // Swap characters
-        char temp = str[i];
-        str[i] = str[j];
-        str[j] = temp;
-        i++;
-        j--;
-    }
-}
+//     while (i < j) {
+//         // Swap characters
+//         char temp = str[i];
+//         str[i] = str[j];
+//         str[j] = temp;
+//         i++;
+//         j--;
+//     }
+// }
 
-int main() {
-    char s[100];
-    printf("Enter a string: ");
-    scanf("%s", s); // Reads string until whitespace
-    reverse(s);
-    printf("Reversed string: %s\n", s);
-    return 0;
-}
+// int main() {
+//     char s[100];
+//     printf("Enter a string: ");
+//     scanf("%s", s); // Reads string until whitespace
+//     reverse(s);
+//     printf("Reversed string: %s\n", s);
+//     return 0;
+// }
 
