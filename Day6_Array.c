@@ -34,40 +34,37 @@
 //     return 0;
 // }
 
-
 // find the maximum value in an array
-
 
 // #include <stdio.h>
 // int main()
-// {   
+// {
 //     int arr[10] = {45, 65, 78, 34, 23, 45, 62, 45, 76, 25};
 //     int Max=arr[0];
 //     for (int i = 0; i <= 10; i++)
-        
+
 //         if (Max < arr[i])
 //         {
 //             Max=arr[i];
-           
+
 //         }
 //          printf("Max =%d\n", Max);
 //     return 0;
 // }
 
-//find the minimum value in an array
+// find the minimum value in an array
 
-#include <stdio.h>
-int main()
-{   
-    int arr[10] = {45, 65, 78, 34, 23, 45, 62, 45, 76, 20};
-    int Min=arr[0];
-    for (int i = 0; i < 10; i++)
-        
-        if (Min >arr[i])
-        {
-            Min=arr[i];
-           
-        }
-         printf("Minimum =%d\n", Min);
-    return 0;
-}
+// #include <stdio.h>
+// int main()
+// {
+//     int arr[10] = {45, 65, 78, 34, 23, 45, 62, 45, 76, 20};
+//     int Min = arr[0];
+//     for (int i = 0; i < 10; i++)
+
+//         if (Min > arr[i])
+//         {
+//             Min = arr[i];
+//         }
+//     printf("Minimum =%d\n", Min);
+//     return 0;
+// }
