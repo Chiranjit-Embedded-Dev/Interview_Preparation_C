@@ -1,17 +1,3 @@
-
-int fun()
-{
-    for (int i = 0; i < 5; i++)
-    {
-        printf("\n*");
-    }
-
-    return 0;
-}
-
-int main()
-{
-    fun();
-    printf("Hallo World");
-    return 0;
-}
+A NULL pointer is a pointer that does not point to any valid memory location.
+// It is used to indicate an empty or uninitialized pointer, often as a sentinel value in arrays, strings, or linked lists.
+// Dereferencing a NULL pointer causes undefined behavior.
