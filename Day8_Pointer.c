@@ -18,7 +18,7 @@
 
 // swap two number using pointer
 
-#include <stdio.h>
+//#include <stdio.h>
 
 // int Swap_number(int *n,int *m)// pass by reference
 // {
@@ -47,3 +47,37 @@
 //     return 0;
 // }
 
+// What is a Dangling Pointer?
+
+// A dangling pointer is a pointer that points to a memory location
+//  that has been freed or is no longer valid.
+
+// Accessing such a pointer leads to undefined behavior — 
+// your program may crash, produce garbage values, or behave unpredictably.
+
+// What is a Void Pointer?
+
+// A void pointer (also called generic pointer) is a pointer that can point to any data type,
+//  but cannot be dereferenced directly without typecasting.
+
+// #include <stdio.h>
+
+// int main() {
+//     int a = 10;
+//     float b = 5.5;
+
+//     void *ptr;
+
+//     ptr = &a;  // point to int
+//     printf("%d\n", *(int*)ptr);  // typecast to int to dereference
+
+//     ptr = &b;  // point to float
+//     printf("%.1f\n", *(float*)ptr);  // typecast to float to dereference
+
+//     return 0;
+// }
+
+
+// A NULL pointer is a pointer that does not point to any valid memory location.
+// It is used to indicate an empty or uninitialized pointer, often as a sentinel value in arrays, strings, or linked lists.
+// Dereferencing a NULL pointer causes undefined behavior.
