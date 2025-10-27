@@ -60,51 +60,54 @@
 
 //     return 0;
 // }
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-struct student {
-    int roll_no;
-    char name[50];
-    float marks;
-};
+// struct student {
+//     int roll_no;
+//     char name[50];
+//     float marks;
+// };
 
-int main() {
-    struct student students[] = {
-        {1, "Ram", 78.50f},
-        {2, "Shyam", 67.23f},
-        {3, "Geeta", 34.25f},
-        {4, "Sita", 64.45f},
-        {5, "Mohan", 69.93f}
-    };
+// int main() {
+//     struct student students[] = {
+//         {1, "Ram", 78.50f},
+//         {2, "Shyam", 67.23f},
+//         {3, "Geeta", 34.25f},
+//         {4, "Sita", 64.45f},
+//         {5, "Mohan", 69.93f}
+//     };
 
-    int count = sizeof(students) / sizeof(students[0]);
-    int input_roll_no;
-    char input_name[50];
-    int found = 0;
+//     int count = sizeof(students) / sizeof(students[0]);
+//     int input_roll_no;
+//     char input_name[50];
+//     int found = 0;
 
-    printf("Enter Roll Number: ");
-    scanf("%d", &input_roll_no);
-    getchar(); // To consume the newline character left by scanf
+//     printf("Enter Roll Number: ");
+//     scanf("%d", &input_roll_no);
+//     getchar(); // To consume the newline character left by scanf
 
-    printf("Enter Name: ");
-    fgets(input_name, sizeof(input_name), stdin);
-    input_name[strcspn(input_name, "\n")] = '\0'; // Remove newline character from input
+//     printf("Enter Name: ");
+//     fgets(input_name, sizeof(input_name), stdin);
+//     input_name[strcspn(input_name, "\n")] = '\0'; // Remove newline character from input
 
-    for (int i = 0; i < count; i++) {
-        if (students[i].roll_no == input_roll_no && strcmp(students[i].name, input_name) == 0) {
+//     for (int i = 0; i < count; i++) {
+//         if (students[i].roll_no == input_roll_no && strcmp(students[i].name, input_name) == 0) {
         
-            printf("Roll No: %d\n", students[i].roll_no);
-            printf("Name: %s\n", students[i].name);
-            printf("Marks: %.2f\n", students[i].marks);
-            found = 1;
-            break;
-        }
-    }
+//             printf("Roll No: %d\n", students[i].roll_no);
+//             printf("Name: %s\n", students[i].name);
+//             printf("Marks: %.2f\n", students[i].marks);
+//             found = 1;
+//             break;
+//         }
+//     }
 
-    if (!found) {
-        printf("\nNo student found with Roll No %d and Name %s.\n", input_roll_no, input_name);
-    }
+//     if (!found) {
+//         printf("\nNo student found with Roll No %d and Name %s.\n", input_roll_no, input_name);
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+//Union 
