@@ -40,29 +40,40 @@
 // | **Unused**                   | Gap between stack and heap                        | Grows dynamically at runtime       |
 
 
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int g1 = 10;      // Global initialized → Data segment
+// int g2;           // Global uninitialized → BSS segment
+
+// void fun()
+// {
+//     int a = 5;               // Local (auto) → Stack
+//     static int b = 20;       // Static (initialized) → Data segment
+//     int *p = malloc(4);      // Dynamic (heap) → Heap
+
+//     *p = 100;
+
+//     printf("a = %d\n", a);
+//     printf("b = %d\n", b);
+//     printf("*p = %d\n", *p);
+
+//     free(p);                 // Release heap memory
+// }
+
+// int main()
+// {
+//     fun();
+//     return 0;
+// }
 #include <stdio.h>
-#include <stdlib.h>
 
-int g1 = 10;      // Global initialized → Data segment
-int g2;           // Global uninitialized → BSS segment
-
-void fun()
-{
-    int a = 5;               // Local (auto) → Stack
-    static int b = 20;       // Static (initialized) → Data segment
-    int *p = malloc(4);      // Dynamic (heap) → Heap
-
-    *p = 100;
-
-    printf("a = %d\n", a);
-    printf("b = %d\n", b);
-    printf("*p = %d\n", *p);
-
-    free(p);                 // Release heap memory
-}
-
-int main()
-{
-    fun();
+int main() {
+    unsigned int x = 1;
+    char *c = (char*)&x;
+    if (*c)
+        printf("Little Endian\n");
+    else
+        printf("Big Endian\n");
     return 0;
 }
