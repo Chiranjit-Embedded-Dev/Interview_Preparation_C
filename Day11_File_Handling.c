@@ -26,29 +26,98 @@
 // Logging system events or errors.
 
 // Creat a file in c
+//  FILE *fp;  // File pointer
 
+//     // Open file for writing (create if not exist)
+//     fp = fopen("myfile.txt", "w");
+// #include <stdio.h>
+// int main()
+// {
+//     FILE* fp;
+
+// fp=fopen("myfile.txt","r");
+
+//     return 0;
+// }
 #include <stdio.h>
 
-int main() {
-    FILE *fp;  // File pointer
+int main()
+{
+    FILE *fp;
 
-    // Open file for writing (create if not exist)
-    fp = fopen("myfile.txt", "w");
+    fp = fopen("File_test.txt", "r");   // Try to open the file in read mode
 
-    // Check if file opened successfully
-    if (fp == NULL) {
-        printf("Error creating file!\n");
-        return 1;
+    // Check if fopen() returned NULL
+    if (fp == NULL)
+    {
+        printf("File could not be opened (maybe it doesn't exist).\n");
     }
-
-    // Write data to file
-    fprintf(fp, "Hello, this is a new file created using C program_1.\n");
-    fprintf(fp, "File handling is easy once you understand it!\n");
-
-    // Close file
-    fclose(fp);
-
-    printf("File created and data written successfully.\n");
+    else
+    {
+        printf("File opened successfully!\n");
+        fclose(fp);   // Always close the file when done
+    }
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// #include <stdio.h>
+
+// int main() {
+//     FILE *fp;  // File pointer
+
+//     // Open file for writing (create if not exist)
+//     fp = fopen("myfile.txt", "w");
+
+//     // Check if file opened successfully
+//     if (fp == NULL) {
+//         printf("Error creating file!\n");
+//         return 1;
+//     }
+
+//     // Write data to file
+//     fprintf(fp, "Hello, this is a new file created using C program_1.\n");
+//     fprintf(fp, "File handling is easy once you understand it!\n");
+
+//     // Close file
+//     fclose(fp);
+
+//     printf("File created and data written successfully.\n");
+
+//     return 0;
+// }
