@@ -1,2 +1,2 @@
-Hello, this is a new file created using C program_1.
-File handling is easy once you understand it!
+Name: Rama
+Age: 25

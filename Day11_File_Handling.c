@@ -39,31 +39,57 @@
 
 //     return 0;
 // }
+// #include <stdio.h>
+
+// int main()
+// {
+//     FILE *fp;
+
+//     fp = fopen("File_test.txt", "r");   // Try to open the file in read mode
+
+//     // Check if fopen() returned NULL
+//     if (fp == NULL)
+//     {
+//         printf("File could not be opened (maybe it doesn't exist).\n");
+//     }
+//     else
+//     {
+//         printf("File opened successfully!\n");
+//         fputc('C');
+//         fclose(fp);   // Always close the file when done
+//     }
+
+//     return 0;
+// }
 #include <stdio.h>
 
-int main()
-{
+int main() {
     FILE *fp;
+    char name[20];
+    int age;
 
-    fp = fopen("File_test.txt", "r");   // Try to open the file in read mode
+    // Open file in read mode
+    fp = fopen("myfile.txt", "r");
 
-    // Check if fopen() returned NULL
-    if (fp == NULL)
-    {
-        printf("File could not be opened (maybe it doesn't exist).\n");
+    // Check if file exists
+    if (fp == NULL) {
+        printf("❌ Error: File not found!\n");
+        return 1;
     }
-    else
-    {
-        printf("File opened successfully!\n");
-        fclose(fp);   // Always close the file when done
-    }
+
+    // Read the formatted data from file
+    fscanf(fp, "Name: %s\nAge: %d", name, &age);
+
+    // Close the file
+    fclose(fp);
+
+    // Display on screen
+    printf("✅ File Data:\n");
+    printf("Name: %s\n", name);
+    printf("Age: %d\n", age);
 
     return 0;
 }
-
-
-
-
 
 
 
