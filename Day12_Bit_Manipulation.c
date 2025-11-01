@@ -98,7 +98,7 @@
 //         printf("%d", (x >> i) & 1);
 //     int n;
 //     printf("\nPlease Select the n'th possition =");
-//     scanf("%d", &n);    
+//     scanf("%d", &n);
 //     // x = x | (1 << n); // for set
 //     // x= x & ~(1 << n);// for clear
 //      x =x ^ (1 << n);//toggel
@@ -107,7 +107,6 @@
 //     for (int i = 7; i >= 0; i--)
 //         printf("%d", (x >> i) & 1);
 // }
-
 
 // check bit are 1 and 0
 
@@ -119,29 +118,30 @@
 // }
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int x, n;
-    int count1=0;
-    int count0=0;
+    int count1 = 0;
+    int count0 = 0;
     printf("Enter a number: ");
     scanf("%d", &x);
 
     printf("Binary form = ");
     for (int i = 7; i >= 0; i--)
-        printf("%d", (x >> i) & 1);
-
-    // printf("\nEnter bit position to check: ");
-    // scanf("%d", &n);
-
-    if (x & (1 << n))
-        {printf("\nBit %d is SET (1)\n", n);
-        count1++;
-        printf("\nNumber of 0 =%d",count1);
+    {
+        int bit = (x >> i) & 1;
+        printf("%d", bit);
+        if (bit == 1)
+        {
+            count1++;
         }
-    else
-      {  printf("Bit %d is CLEAR (0)\n", n);
-        count0++;
-        printf("\nNumber of 0 =%d",count0);
-      }
+        else
+        {
+            count0++;
+        }
+    }
+    printf("\nNumber of 1s = %d", count1);
+    printf("\nNumber of 0s = %d\n", count0);
+
     return 0;
 }
