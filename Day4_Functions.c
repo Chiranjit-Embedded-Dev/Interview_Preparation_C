@@ -84,3 +84,19 @@
 // }
 
 // function pointer
+// ️ Factorial using loops
+
+// #include <stdio.h>
+// int main()
+// {
+//     int n = 0;
+//     int fact = 1;
+//     printf(" Please enter a number for factriol");
+//     scanf("%d", &n);
+//     for (int i = 1; i < n; i++)
+//     {
+//         fact = fact * i;
+//     }
+//     printf(" Please enter a number for factriol n=%d is =%d", n, fact);
+//     return 0;
+// }
