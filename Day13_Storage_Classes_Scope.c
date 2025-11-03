@@ -57,56 +57,56 @@
 
 
 //relloc
-#include <stdio.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 
-int main() {
-    int *ptr;
-    int n, i;
+// int main() {
+//     int *ptr;
+//     int n, i;
 
-    printf("Enter number of elements: ");
-    scanf("%d", &n);
+//     printf("Enter number of elements: ");
+//     scanf("%d", &n);
 
-    ptr = (int*) malloc(n * sizeof(int));
+//     ptr = (int*) malloc(n * sizeof(int));
 
-    if (ptr == NULL) {
-        printf("Memory not allocated.\n");
-        return 1;
-    }
+//     if (ptr == NULL) {
+//         printf("Memory not allocated.\n");
+//         return 1;
+//     }
 
-    printf("\nEnter %d elements:\n", n);
-    for (i = 0; i < n; i++) {
-        scanf("%d", &ptr[i]);
-    }
+//     printf("\nEnter %d elements:\n", n);
+//     for (i = 0; i < n; i++) {
+//         scanf("%d", &ptr[i]);
+//     }
 
-    printf("\nYou entered: ");
-    for (i = 0; i < n; i++) {
-        printf("%d ", ptr[i]);
-    }
+//     printf("\nYou entered: ");
+//     for (i = 0; i < n; i++) {
+//         printf("%d ", ptr[i]);
+//     }
 
-    // Now increase array size using realloc
-    printf("\n\nEnter new size: ");
-    int new_n;
-    scanf("%d", &new_n);
+//     // Now increase array size using realloc
+//     printf("\n\nEnter new size: ");
+//     int new_n;
+//     scanf("%d", &new_n);
 
-    ptr = (int*) realloc(ptr, new_n * sizeof(int));
+//     ptr = (int*) realloc(ptr, new_n * sizeof(int));
 
-    if (ptr == NULL) {
-        printf("Memory reallocation failed.\n");
-        return 1;
-    }
+//     if (ptr == NULL) {
+//         printf("Memory reallocation failed.\n");
+//         return 1;
+//     }
 
-    // Enter additional elements
-    for (i = n; i < new_n; i++) {
-        printf("Enter new element %d: ", i + 1);
-        scanf("%d", &ptr[i]);
-    }
+//     // Enter additional elements
+//     for (i = n; i < new_n; i++) {
+//         printf("Enter new element %d: ", i + 1);
+//         scanf("%d", &ptr[i]);
+//     }
 
-    printf("\nUpdated elements: ");
-    for (i = 0; i < new_n; i++) {
-        printf("%d ", ptr[i]);
-    }
+//     printf("\nUpdated elements: ");
+//     for (i = 0; i < new_n; i++) {
+//         printf("%d ", ptr[i]);
+//     }
 
-    free(ptr);
-    return 0;
-}
+//     free(ptr);
+//     return 0;
+// }
