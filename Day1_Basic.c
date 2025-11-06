@@ -64,3 +64,37 @@
 // | `double` | 8 B   | ±1.7 × 10³⁰⁸ (≈15 digits)                                        | `double price = 99.99;` | Double precision decimals  |
 // | `char`   | 1 B   | -128 to 127 (signed) / 0 to 255 (unsigned)                       | `char grade = 'A';`     | Single character           |
 // | `void`   | 0 B   | N/A                                                              | `void greet() {}`       | No value / function return |
+
+
+
+
+//
+// #include<stdio.h>
+// int main()
+// {
+//     /* code */
+//     char a=10;
+//     // unsigned char b=0;
+//     printf("%d",a++);
+//     printf("%d",++a);
+
+
+//     return 0;
+// }
+#include <stdio.h>
+
+int main()
+{
+    printf("Size of char         = %lu bytes\n", sizeof(char));
+    printf("Size of int          = %lu bytes\n", sizeof(int));
+    printf("Size of float        = %lu bytes\n", sizeof(float));
+    printf("Size of double       = %lu bytes\n", sizeof(double));
+    printf("Size of long double  = %lu bytes\n", sizeof(long long int));
+    return 0;
+}
+
+
+
+
+
+

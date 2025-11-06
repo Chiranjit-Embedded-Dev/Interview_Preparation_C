@@ -143,8 +143,37 @@
 //     return 0;
 // }
 
-int main(int argc, char const *argv[])
-{
-    /* code */
+#include <stdio.h>
+
+int main() {
+    int x = 10; // 00001010
+    int n = 5;
+
+    printf("Original number: %d\n", x);
+
+    // Set bit
+    x = x | (1 << n);
+    printf("After setting bit %d: %d\n", n, x);
+
+    // Clear bit
+    x = x & ~(1 << n);
+    printf("After clearing bit %d: %d\n", n, x);
+
+    // Toggle bit
+    x = x ^ (1 << n);
+    printf("After toggling bit %d: %d\n", n, x);
+
+
+    // Toggle bit
+  
+    printf("2^%d = %d\n", n, 1 << n);
+    return 0;
+
+    // Check bit
+    if (x & (1 << n))
+        printf("Bit %d is set\n", n);
+    else
+        printf("Bit %d is clear\n", n);
+
     return 0;
 }
