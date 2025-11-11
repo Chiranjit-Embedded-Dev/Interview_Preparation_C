@@ -125,19 +125,27 @@
 
 // static variable’s lifetime and scope
 //
-#include <stdio.h>
-int main()
-{
-    int a = 10;
-    int *ptr = &a;
-    int **ptr1 = &ptr;
-    //    int  add =*ptr+**ptr1;
-    printf("%p\n", (void *)ptr);
+// #include <stdio.h>
+// int main()
+// {
+//     int a = 10;
+//     int *ptr = &a;
+//     int **ptr1 = &ptr;
+//     //    int  add =*ptr+**ptr1;
+//     printf("%p\n", (void *)ptr);
 
-    ptr++;
-    printf("%p\n", (void *)ptr);
-    printf("%p\n", (void *)ptr1--);
-    ptr1--;
-    printf("%p\n", (void *)ptr1--);
-    return 0;
-}
+//     ptr++;
+//     printf("%p\n", (void *)ptr);
+//     printf("%p\n", (void *)ptr1--);
+//     ptr1--;
+//     printf("%p\n", (void *)ptr1--);
+//     return 0;
+// }
+
+// const int *p, int *const p, and const int *const p
+//   value cant be change ,
+//   memory location cant be change 
+//   both moemory and value cant change 
+
+
+// char *str = "Hello"; and char str[] = "Hello";?
