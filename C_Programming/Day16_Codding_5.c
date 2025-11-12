@@ -248,73 +248,73 @@
 
 // Read a particular bit in a number.
 
-#include <stdio.h>
-int num = 0b00001010;
-int set()
-{
-    int nth = 0;
-    printf("Before the bit is ");
-    for (int i = 7; i >= 0; i--)
-    {
-        printf("%d", (num >> i) & 1);
-    }
-    num = num | (1 << nth);
-    printf("\nAfter the bit is ");
-    for (int i = 7; i >= 0; i--)
-    {
-        printf("%d", (num >> i) & 1);
-    }
-}
-int clear()
-{
-    int nth = 3;
-    printf("\nBefore the bit is ");
-    for (int i = 7; i >= 0; i--)
-    {
-        printf("%d", (num >> i) & 1);
-    }
-    num = num & ~(1 << nth);
-    printf("\nAfter the bit is ");
-    for (int i = 7; i >= 0; i--)
-    {
-        printf("%d", (num >> i) & 1);
-    }
-}
-int toggle()
-{
-    int nth = 1;
-    printf("\nBefore the bit is ");
-    for (int i = 7; i >= 0; i--)
-    {
-        printf("%d", (num >> i) & 1);
-    }
-    num = num ^ (1 << nth);
-    printf("\nAfter the bit is ");
-    for (int i = 7; i >= 0; i--)
-    {
-        printf("%d", (num >> i) & 1);
-    }
-}
+// #include <stdio.h>
+// int num = 0b00001010;
+// int set()
+// {
+//     int nth = 0;
+//     printf("Before the bit is ");
+//     for (int i = 7; i >= 0; i--)
+//     {
+//         printf("%d", (num >> i) & 1);
+//     }
+//     num = num | (1 << nth);
+//     printf("\nAfter the bit is ");
+//     for (int i = 7; i >= 0; i--)
+//     {
+//         printf("%d", (num >> i) & 1);
+//     }
+// }
+// int clear()
+// {
+//     int nth = 3;
+//     printf("\nBefore the bit is ");
+//     for (int i = 7; i >= 0; i--)
+//     {
+//         printf("%d", (num >> i) & 1);
+//     }
+//     num = num & ~(1 << nth);
+//     printf("\nAfter the bit is ");
+//     for (int i = 7; i >= 0; i--)
+//     {
+//         printf("%d", (num >> i) & 1);
+//     }
+// }
+// int toggle()
+// {
+//     int nth = 1;
+//     printf("\nBefore the bit is ");
+//     for (int i = 7; i >= 0; i--)
+//     {
+//         printf("%d", (num >> i) & 1);
+//     }
+//     num = num ^ (1 << nth);
+//     printf("\nAfter the bit is ");
+//     for (int i = 7; i >= 0; i--)
+//     {
+//         printf("%d", (num >> i) & 1);
+//     }
+// }
 
-int check()
-{
-    int nth = 2;
-      if (num & (1 << nth)) // this is importend
-    {
-        printf("\nnth bit is set");
-    }
-    else
-    {
-        printf("\nnth bit is not set");
-    }
-}
-int main()
-{
+// int check()
+// {
+//     int nth = 2;
+//       if (num & (1 << nth)) // this is importend
+//     {
+//         printf("\nnth bit is set");
+//     }
+//     else
+//     {
+//         printf("\nnth bit is not set");
+//     }
+// }
+// int main()
+// {
 
-    set();
-    clear();
-    toggle();
-    check();
+//     set();
+//     clear();
+//     toggle();
+//     check();
 
-    return 0;
-}
+//     return 0;
+// }
