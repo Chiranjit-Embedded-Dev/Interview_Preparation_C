@@ -296,6 +296,7 @@
 //     }
 // }
 
+
 // int check()
 // {
 //     int nth = 2;
@@ -368,3 +369,27 @@ int main() {
     free(result);  // ✅ Free memory here (caller responsibility)
     return 0;
 }
+
+
+// int check()
+// {
+//     int nth = 2;
+//       if (num & (1 << nth)) // this is importend
+//     {
+//         printf("\nnth bit is set");
+//     }
+//     else
+//     {
+//         printf("\nnth bit is not set");
+//     }
+// }
+// int main()
+// {
+
+//     set();
+//     clear();
+//     toggle();
+//     check();
+
+//     return 0;
+// }

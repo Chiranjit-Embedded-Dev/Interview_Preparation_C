@@ -1,6 +1,25 @@
+
 // You must count the number of set bits (1s) in 
 // the binary representation of all numbers from 0 to n, 
 // and return the results in an array.
+
+// //For a given non-negative integer n, write a program 
+// that generates a list of the counts of "set bits" (the number of 1 s in the binary representation) 
+// for every number from 0 to n.
+
+// Example 1: Count set bits for n = 7
+// We find the number of 1 s for each number from 0 to 7.
+
+// 0 (000) → 0  
+// 1 (001) → 1  
+// 2 (010) → 1  
+// 3 (011) → 2  
+// 4 (100) → 1  
+// 5 (101) → 2  
+// 6 (110) → 2  
+// 7 (111) → 3
+
+
 #include <stdio.h>
 #include <stdlib.h>   // for malloc, free
 
@@ -50,3 +69,4 @@ int main() {
     free(result);  // ✅ Free memory here (caller responsibility)
     return 0;
 }
+
