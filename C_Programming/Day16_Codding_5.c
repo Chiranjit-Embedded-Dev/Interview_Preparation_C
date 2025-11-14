@@ -393,3 +393,9 @@ int main() {
 
 //     return 0;
 // }
+// Online C compiler to run C program online
+// int arr[] = {2,3,4,8,8,8,8,10,11,12};
+// find the 1st and last occurrence of the number 8
+// dont dont have any other 8
+//only one 8
+
