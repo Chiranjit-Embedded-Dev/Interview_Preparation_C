@@ -248,73 +248,123 @@
 
 // Read a particular bit in a number.
 
+// #include <stdio.h>
+// int num = 0b00001010;
+// int set()
+// {
+//     int nth = 0;
+//     printf("Before the bit is ");
+//     for (int i = 7; i >= 0; i--)
+//     {
+//         printf("%d", (num >> i) & 1);
+//     }
+//     num = num | (1 << nth);
+//     printf("\nAfter the bit is ");
+//     for (int i = 7; i >= 0; i--)
+//     {
+//         printf("%d", (num >> i) & 1);
+//     }
+// }
+// int clear()
+// {
+//     int nth = 3;
+//     printf("\nBefore the bit is ");
+//     for (int i = 7; i >= 0; i--)
+//     {
+//         printf("%d", (num >> i) & 1);
+//     }
+//     num = num & ~(1 << nth);
+//     printf("\nAfter the bit is ");
+//     for (int i = 7; i >= 0; i--)
+//     {
+//         printf("%d", (num >> i) & 1);
+//     }
+// }
+// int toggle()
+// {
+//     int nth = 1;
+//     printf("\nBefore the bit is ");
+//     for (int i = 7; i >= 0; i--)
+//     {
+//         printf("%d", (num >> i) & 1);
+//     }
+//     num = num ^ (1 << nth);
+//     printf("\nAfter the bit is ");
+//     for (int i = 7; i >= 0; i--)
+//     {
+//         printf("%d", (num >> i) & 1);
+//     }
+// }
+
+// int check()
+// {
+//     int nth = 2;
+//       if (num & (1 << nth)) // this is importend
+//     {
+//         printf("\nnth bit is set");
+//     }
+//     else
+//     {
+//         printf("\nnth bit is not set");
+//     }
+// }
+// int main()
+// {
+
+//     set();
+//     clear();
+//     toggle();
+//     check();
+
+//     return 0;
+// }
+
 #include <stdio.h>
-int num = 0b00001010;
-int set()
-{
-    int nth = 0;
-    printf("Before the bit is ");
-    for (int i = 7; i >= 0; i--)
-    {
-        printf("%d", (num >> i) & 1);
+#include <stdlib.h>   // for malloc, free
+
+/**
+ * Note: The returned array must be malloc'ed, and free'd by the caller.
+ */
+int* countBits(int n, int* returnSize) {
+    *returnSize = n + 1;                        // count from 0 to n
+
+    // Allocate memory safely
+    int* result = (int*)malloc((*returnSize) * sizeof(int));
+    if (result == NULL) {
+        *returnSize = 0;
+        return NULL;                            // return NULL if allocation fails
     }
-    num = num | (1 << nth);
-    printf("\nAfter the bit is ");
-    for (int i = 7; i >= 0; i--)
-    {
-        printf("%d", (num >> i) & 1);
+
+    result[0] = 0;                              // base case
+    for (int i = 1; i <= n; i++) {
+        result[i] = result[i >> 1] + (i & 1);   // bits(i) = bits(i/2) + (i%2)
     }
-}
-int clear()
-{
-    int nth = 3;
-    printf("\nBefore the bit is ");
-    for (int i = 7; i >= 0; i--)
-    {
-        printf("%d", (num >> i) & 1);
-    }
-    num = num & ~(1 << nth);
-    printf("\nAfter the bit is ");
-    for (int i = 7; i >= 0; i--)
-    {
-        printf("%d", (num >> i) & 1);
-    }
-}
-int toggle()
-{
-    int nth = 1;
-    printf("\nBefore the bit is ");
-    for (int i = 7; i >= 0; i--)
-    {
-        printf("%d", (num >> i) & 1);
-    }
-    num = num ^ (1 << nth);
-    printf("\nAfter the bit is ");
-    for (int i = 7; i >= 0; i--)
-    {
-        printf("%d", (num >> i) & 1);
-    }
+
+    return result;
 }
 
-int check()
-{
-    int nth = 2;
-      if (num & (1 << nth)) // this is importend
-    {
-        printf("\nnth bit is set");
-    }
-    else
-    {
-        printf("\nnth bit is not set");
-    }
-}
-int main()
-{
+int main() {
+    int n;
+    printf("Enter n: ");
+    scanf("%d", &n);
 
-    set();
-    clear();
-    toggle();
-    check();
+    int size;
+    int* result = countBits(n, &size);
 
+    if (result == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1;  // exit safely
+    }
+
+    printf("Count of set bits from 0 to %d:\n", n);
+    printf("[");
+    for (int i = 0; i < size; i++) {
+        printf("%d", result[i]);
+        if (i < size - 1)
+            printf(", ");
+    }
+    printf("]\n");
+
+    free(result);  // ✅ Free memory here (caller responsibility)
     return 0;
 }
