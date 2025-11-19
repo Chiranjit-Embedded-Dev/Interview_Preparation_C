@@ -4,43 +4,28 @@
 
 //pointer to a  constant - the the value of memory can be change but memory cant be 
 //  constant pointer- value cant be change but memory location can be change
-// Type	       Pointer address  	  Value through pointer
-// const int *ptr	  ✅ changeable	       ❌ cannot change
-// int * const ptr	  ❌ fixed	           ✅ can change
+// #include <stdio.h>
 
-// What is the difference between 
-// volatile and const keywords in C?
+// int main() {
+//     int a = 10;
+//     int b = 20;
 
-// volatile - the value of the variable not fixed can be change any monent of time
-//const- the is fixed can't be change 
+//     const int *ptr = &a;   // pointer to constant integer
 
-// Why do we use the volatile keyword when accessing
-// hardware registers or memory-mapped I/O in embedded
-// systems?
-// Can you explain with a small example code snippet?
+//     printf("Initially, *ptr = %d\n", *ptr);
 
-// #define SENSOR_STATUS  (*(volatile unsigned int*)0x40001000)
+//     // *ptr = 15;  ❌ ERROR: cannot modify value through pointer
+//     ptr = &b;              // ✅ allowed: pointer can point somewhere else
 
-// int main(void) {
-//     while ((SENSOR_STATUS & 0x01) == 0) {
-//         // wait until sensor sets "data ready" flag
-//     }
+//     printf("After changing address, *ptr = %d\n", *ptr);
 
-//     // Once flag set, read sensor data...
+//     return 0;
 // }
 
-
-// What is the difference between static and global 
-// variables in C?
-
-// scope -global -scope is enter code,static scope is
-// beased on where we declar if local then within 
-// function  if global then enter code
-
-// lifetime- global- enter code excution ,
-// static- end of functoin life for local and for global
-// static it will be end of code excution
-
-
-// Explain the different storage classes in C:
-// auto, register, static, and extern.
+uint32_t little_to_big_32(uint32_t x)
+{
+    return  ((x & 0x000000FF) << 24) |
+            ((x & 0x0000FF00) << 8)  |
+            ((x & 0x00FF0000) >> 8)  |
+            ((x & 0xFF000000) >> 24);
+}
