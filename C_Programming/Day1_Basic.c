@@ -103,10 +103,12 @@ int main()
     char a=10;
     // unsigned char b=0;
     printf("%d\n",a++);
-    printf("%d\n",++a);
+  
 
 
     return 0;
+
+
 }
 
 
