@@ -102,8 +102,8 @@ int main()
     /* code */
     char a=10;
     // unsigned char b=0;
-    printf("%d",a++);
-    printf("%d",++a);
+    printf("%d\n",a++);
+    printf("%d\n",++a);
 
 
     return 0;
