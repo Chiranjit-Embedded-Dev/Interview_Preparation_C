@@ -93,23 +93,21 @@
 //     return 0;
 // }
 
-<<<<<<< HEAD
 
+// #include<stdio.h>
 
-#include<stdio.h>
-
-int main()
-{
-    /* code */
-    char a=10;
-    // unsigned char b=0;
-    printf("%d\n",a++);
+// int main()
+// {
+//     /* code */
+//     char a=10;
+//     // unsigned char b=0;
+//     printf("%d\n",a++);
   
 
 
-    return 0;
+//     return 0;
 
-=======
+
 #include <stdio.h>
 
 int main()
@@ -121,8 +119,6 @@ int main()
     int sum;
     sum=a+b;
     printf("Sum of a and b is =%d",sum);
->>>>>>> a974005 (Signed-off-by: Chiranjit Adhikary <chiranjitadhikary.info@gmail.com>)
 
 }
-
 
