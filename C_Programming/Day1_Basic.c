@@ -118,7 +118,9 @@ int main()
     scanf("%d %d", &a, &b);
     int sum;
     sum=a+b;
-    printf("Sum of a and b is =%d",sum);
+    int multiplication;
+    multiplication=a*b;
+    printf("multiplication of a and b is =%d",multiplication);
 
 }
 
