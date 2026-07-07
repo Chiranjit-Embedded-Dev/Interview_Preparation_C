@@ -175,11 +175,13 @@
 // | `<<`     | Left Shift           | Shifts bits to the left, filling 0s on the right                              |                                                 |
 // | `>>`     | Right Shift          | Shifts bits to the right, filling 0s on the left (depends on signed/unsigned) |                                                 |
 
-#include <stdio.h>
-int main()
-{
-    int a=10;
-    int x=a;
-    printf("%d",++a);
-    return 0;
-}
+// #include <stdio.h>
+// int main()
+// {
+//     int a=10;
+//     int x=a;
+//     printf("%d",++a);
+//     return 0;
+// }
+
+

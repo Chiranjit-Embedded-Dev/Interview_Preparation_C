@@ -93,6 +93,7 @@
 //     return 0;
 // }
 
+<<<<<<< HEAD
 
 
 #include<stdio.h>
@@ -108,6 +109,19 @@ int main()
 
     return 0;
 
+=======
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    int b;
+    printf("Please Enter Value of A and B\n");
+    scanf("%d %d", &a, &b);
+    int sum;
+    sum=a+b;
+    printf("Sum of a and b is =%d",sum);
+>>>>>>> a974005 (Signed-off-by: Chiranjit Adhikary <chiranjitadhikary.info@gmail.com>)
 
 }
 
