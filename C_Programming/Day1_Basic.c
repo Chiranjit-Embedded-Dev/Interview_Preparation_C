@@ -121,7 +121,7 @@ int main()
     int multiplication;
     multiplication=a*b;
     printf("multiplication of a and b is =%d",multiplication);
-     printf("multiplication of a and b is =%d",multiplication);
-
+    printf("multiplication of a and b is =%d",multiplication);
+printf("multiplication of a and b is =%d",multiplication);
 }
 
