@@ -1,18 +1,13 @@
-#include <stdio.h>
+int main()
+{
+    int a;
+    int b;
+    printf("Please Enter Value of A and B\n");
+    scanf("%d %d", &a, &b);
+    int sum;
+    sum=a+b;
+    int multiplication;
+    multiplication=a*b;
+    printf("multiplication of a and b is =%d",multiplication);
 
-int main() {
-    int n, count = 0;
-
-    printf("Enter number: ");
-    scanf("%d", &n);
-
-    // your logic here
-    if (n%10==0)
-    {
-       count++;
-    }
-    
-
-    printf("Digits = %d\n", count);
-    return 0;
 }
