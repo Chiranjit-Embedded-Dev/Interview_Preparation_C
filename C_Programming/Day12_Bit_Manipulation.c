@@ -116,32 +116,102 @@
 //     fun_print_binarry(x);
 //     return 0;
 // }
+// #include <stdio.h>
+
+// int main()
+// {
+//     int x, n;
+//     int count1 = 0;
+//     int count0 = 0;
+//     printf("Enter a number: ");
+//     scanf("%d", &x);
+
+//     printf("Binary form = ");
+//     for (int i = 7; i >= 0; i--)
+//     {
+//         int bit = (x >> i) & 1;
+//         printf("%d", bit);
+//         if (bit == 1)
+//         {
+//             count1++;
+//         }
+//         else
+//         {
+//             count0++;
+//         }
+//     }
+//     printf("\nNumber of 1s = %d", count1);
+//     printf("\nNumber of 0s = %d\n", count0);
+
+//     return 0;
+// }
+// #include <stdio.h>
+// int fun_bin(int num)
+// {
+//     for(int n=7;n>=0;n--)
+//     {
+//         printf("%d",(num >> n) & 1);
+//     }
+//      printf("\n");
+// }
+// // nth bit set 
+// int fun_set(int num,int set)
+// {
+    
+//     int x=num;
+//     fun_bin(x);
+//     x= x | (1 << set);
+//     printf("%d",x);
+//     printf("\n");
+//      fun_bin(x);
+// }
+// int fun_clear(int num,int clr)
+// {
+    
+//     int x=num;
+//     fun_bin(x);
+//     x= x & ~(1 << clr);
+//     printf("%d",x);
+//     printf("\n");
+//      fun_bin(x);
+// }
+
+// int main()
+// {
+//     int n = 24;
+//     int set=5;
+//     int clr=4;
+//     fun_bin(n);
+//     fun_set(n,set);
+//     fun_clear(n,clr);
+//     return 0;
+// }
+
 #include <stdio.h>
+int fun_bin(int num)
+{
+    for(int n=7;n>=0;n--)
+    {
+        printf("%d",(num >> n) & 1);
+    }
+     printf("\n");
+}
+void check_bit(int num, int n)
+{
+    int bit;
+       fun_bin(num);
+    bit = (num >> n) & 1;
+
+    printf("%d bit = %d\n", n, bit);
+     fun_bin(num);
+}
 
 int main()
 {
-    int x, n;
-    int count1 = 0;
-    int count0 = 0;
-    printf("Enter a number: ");
-    scanf("%d", &x);
+    int num = 24;
 
-    printf("Binary form = ");
-    for (int i = 7; i >= 0; i--)
-    {
-        int bit = (x >> i) & 1;
-        printf("%d", bit);
-        if (bit == 1)
-        {
-            count1++;
-        }
-        else
-        {
-            count0++;
-        }
-    }
-    printf("\nNumber of 1s = %d", count1);
-    printf("\nNumber of 0s = %d\n", count0);
+    check_bit(num, 4);
+    fun_bin(num);
 
     return 0;
 }
