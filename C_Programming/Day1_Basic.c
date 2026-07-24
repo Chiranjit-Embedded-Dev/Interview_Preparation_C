@@ -114,11 +114,11 @@ int main()
     int b=0;
     int sum;
     
-   printf("Please enter two number \n");
-   scanf("%d \n %d \n",&a,&b);
+   printf("Please enter two number:");
+   scanf("%d %d",&a,&b);
    sum = a+b;
 
-   printf("The Sum of two number is = %d");
+   printf("The Sum of two number is = %d",sum);
 
    return 0;
 
