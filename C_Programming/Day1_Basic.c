@@ -81,20 +81,47 @@
 
 //     return 0;
 // }
+// #include <stdio.h>
+
+// int main()
+// {
+//     printf("Size of char         = %lu bytes\n", sizeof(char));
+//     printf("Size of int          = %lu bytes\n", sizeof(int));
+//     printf("Size of float        = %lu bytes\n", sizeof(float));
+//     printf("Size of double       = %lu bytes\n", sizeof(double));
+//     printf("Size of long double  = %lu bytes\n", sizeof(long long int));
+//     return 0;
+// }
+
+
+// #include<stdio.h>
+
+// int main()
+// {
+//     /* code */
+//     char a=10;
+//     // unsigned char b=0;
+//     printf("%d\n",a++);
+  
+
+
+//     return 0;
+
+
 #include <stdio.h>
 
 int main()
 {
-    printf("Size of char         = %lu bytes\n", sizeof(char));
-    printf("Size of int          = %lu bytes\n", sizeof(int));
-    printf("Size of float        = %lu bytes\n", sizeof(float));
-    printf("Size of double       = %lu bytes\n", sizeof(double));
-    printf("Size of long double  = %lu bytes\n", sizeof(long long int));
-    return 0;
+    int a;
+    int b;
+    printf("Please Enter Value of A and B\n");
+    scanf("%d %d", &a, &b);
+    int sum;
+    sum=a+b;
+    int multiplication;
+    multiplication=a*b;
+    printf("multiplication of a and b is =%d",multiplication);
+    printf("multiplication of a and b is =%d",multiplication);
+    printf("multiplication of a and b is =%d",multiplication);
 }
-
-
-
-
-
 
