@@ -94,16 +94,50 @@
 // }
 
 
-#include<stdio.h>
+// #include<stdio.h>
 
-int main()
+// int main()
+// {
+//     /* code */
+//     char a=10;
+//     // unsigned char b=0;
+//     printf("%d\n",a++);
+
+//     return 0;
+// }
+
+
+#include <stdio.h>
+
+int main(void)
 {
-    /* code */
-    char a=10;
-    // unsigned char b=0;
-    printf("%d\n",a++);
+    int n;
+    int first = 0, second = 1, next;
+
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++)
+    {
+        if (i == 1)
+        {
+            printf("%d ", first);
+        }
+        else if (i == 2)
+        {
+            printf("%d ", second);
+        }
+        else
+        {
+            next = first + second;
+            printf("%d ", next);
+
+            first = second;
+            second = next;
+        }
+    }
+
+    printf("\n");
 
     return 0;
 }
-
-
