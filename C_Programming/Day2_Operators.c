@@ -185,3 +185,14 @@
 // }
 
 
+#include <stdio.h>
+
+int main() {
+     char ch = 132;
+
+    printf("%d\n", ch);
+
+    return 0;
+}
+
+
