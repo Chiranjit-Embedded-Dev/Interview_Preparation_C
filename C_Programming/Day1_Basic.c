@@ -107,37 +107,105 @@
 // }
 
 
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int n;
+//     int first = 0, second = 1, next;
+
+//     printf("Enter the number of terms: ");
+//     scanf("%d", &n);
+
+//     for (int i = 1; i <= n; i++)
+//     {
+//         if (i == 1)
+//         {
+//             printf("%d ", first);
+//         }
+//         else if (i == 2)
+//         {
+//             printf("%d ", second);
+//         }
+//         else
+//         {
+//             next = first + second;
+//             printf("%d ", next);
+
+//             first = second;
+//             second = next;
+//         }
+//     }
+
+//     printf("\n");
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main()
+// {
+//     int a = 1;
+//     a = a++ + ++a + a--;
+//     printf("%d",a);
+//     return 0;
+// }
+
+//Write a C program to swap two integers using a temporary variable.
+// #include <stdio.h>
+// int main()
+// {
+//     int a= 11;
+//     int b = 20;
+//     int temp =0;
+//     printf("The value of A and B befor sweep the number is\n A=%d \n B =%d \n",a,b );
+
+//     // temp =a;
+//     // a=b;
+//     // b=temp;
+//     a=a+b;
+//     b=a-b;
+//     a=a-b;
+//     printf("The value of A and B after sweep the number is\n A=%d \n B =%d \n",a,b );
+//     return 0;
+// }
+
+//Write a C program to find the largest among three integers using if-else statements.
+
 #include <stdio.h>
+// int main(void)
+// {
+//     int a = 15;
+//     int b = 25;
+//     int c = 20;
 
-int main(void)
+//     if(a>b && a>c)
+//     {
+//         printf("A is the Largest =%d",a);
+//     }
+//     else if (b>a && b>c)
+//     {
+    
+//         printf("B is the Largest =%d",b);
+
+//     }
+//     else
+
+//     printf("C is the Largest =%d",c);
+
+//     return 0;
+// }
+
+int x = 10;       // global variable
+
+void test()
 {
-    int n;
-    int first = 0, second = 1, next;
+    extern int x;
+    x++;
+}
 
-    printf("Enter the number of terms: ");
-    scanf("%d", &n);
-
-    for (int i = 1; i <= n; i++)
-    {
-        if (i == 1)
-        {
-            printf("%d ", first);
-        }
-        else if (i == 2)
-        {
-            printf("%d ", second);
-        }
-        else
-        {
-            next = first + second;
-            printf("%d ", next);
-
-            first = second;
-            second = next;
-        }
-    }
-
-    printf("\n");
-
-    return 0;
+int main()
+{
+    test();
+    printf("%d", x);
 }

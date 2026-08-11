@@ -185,14 +185,37 @@
 // }
 
 
+//#include <stdio.h>
+
+// int main() {
+//      char ch = 132;
+
+//     printf("%d\n", ch);
+
+//     return 0;
+// }
+//
+//🔹 Problem 1: Reverse a Number
 #include <stdio.h>
-
-int main() {
-     char ch = 132;
-
-    printf("%d\n", ch);
+int main(void)
+{    
+    int num = 0;
+    int revers = 0;
+    int digit = 0;
+    printf(" Please enter a number\n");
+    scanf("%d",&num);
+    printf("%d",num);
+    
+    while (num!=0)
+    {
+        digit = num % 10;
+        revers = revers * 10 + digit;
+        num =num / 10 ;
+        /* code */
+    }
+    
+    printf(" Revers numbre is = %d",revers);
 
     return 0;
 }
-
 
