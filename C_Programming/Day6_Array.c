@@ -151,3 +151,57 @@
 
 //     return 0;
 // }
+
+
+// Write a C program to find the largest element in an array.
+
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main(void)
+// {
+//     int _Arr[5]={10,20,30,40,60};
+//     int _Max=_Arr[0];
+//     for(int i = 0; i < 5; i++)
+//     {
+    
+//         if(_Arr[i] > _Max)
+//         {
+//            _Max=_Arr[i];
+//         }
+       
+//     }
+//      printf(" The MAX arry is %d ",_Max);
+//     return 0;
+// }
+
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    int _Arr[5]={10,20,30,40,60};
+    int _Max=_Arr[0];
+    int _Second=0;
+    for(int i = 0; i < 5; i++)
+    {
+    
+        if(_Arr[i] > _Max)
+        {
+           _Second = _Max;
+           _Max=_Arr[i];
+
+        }
+      else if (_Arr[i] > _Second && _Arr[i] < _Max)
+
+           {
+            _Second=_Arr[i];
+            
+           }
+
+    }
+     printf(" The MAX arry is %d ",_Max);
+     printf(" The 2nd arry is %d ",_Second);
+    return 0;
+}

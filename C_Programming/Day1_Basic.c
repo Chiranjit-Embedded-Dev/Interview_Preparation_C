@@ -196,16 +196,35 @@
 //     return 0;
 // }
 
-int x = 10;       // global variable
+// int x = 10;       // global variable
 
-void test()
+// void test()
+// {
+//     extern int x;
+//     x++;
+// }
+
+// int main()
+// {
+//     test();
+//     printf("%d", x);
+// }
+
+#include <stdio.h>
+
+void test(void)
 {
-    extern int x;
-    x++;
+    static int x = 10;
+
+    printf("%d ", x++);
+
 }
 
-int main()
+int main(void)
 {
     test();
-    printf("%d", x);
+    test();
+    test();
+
+    return 0;
 }
