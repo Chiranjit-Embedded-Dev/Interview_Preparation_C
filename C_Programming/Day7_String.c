@@ -1,19 +1,19 @@
 // //String
-#include <stdio.h>
-#include<string.h>
+// #include <stdio.h>
+// #include<string.h>
 
-int main()
-{
-   // char arr[5]={'a','b','c','d','e'};
-    char arr_1[]={"Hello World"};
-    for (int i=0;i<=5;i++)
-    {
-    printf("%c\n",arr_1[i]);
-    }
+// int main()
+// {
+//    // char arr[5]={'a','b','c','d','e'};
+//     char arr_1[]={"Hello World"};
+//     for (int i=0;i<=5;i++)
+//     {
+//     printf("%c\n",arr_1[i]);
+//     }
 
-    printf("%s",arr_1);
-    return 0;
-}
+//     printf("%s",arr_1);
+//     return 0;
+// }
 
 // Null Characters
 
@@ -160,3 +160,7 @@ int main()
 //     printf("Copied string: %s\n", dest); // Output: Hello
 //     return 0;
 // }
+
+
+//Revers a String 
+
