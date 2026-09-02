@@ -164,3 +164,25 @@
 
 //Revers a String 
 
+#include <stdio.h>
+#include<string.h>
+int fun_rev()
+{
+    char str[100];
+    
+    printf("Please Enter a string ");
+    scanf("%s",&str);
+    printf("%s \n",str);
+    int len=strlen(str);
+    for (int i=len -1;i >=0;i--)
+    {
+      printf("%c",str[i]);
+    }
+    printf("\n");
+}
+
+int main(void)
+{
+    fun_rev();
+    return 0;
+}
