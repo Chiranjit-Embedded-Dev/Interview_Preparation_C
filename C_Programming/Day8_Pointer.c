@@ -81,3 +81,59 @@
 // A NULL pointer is a pointer that does not point to any valid memory location.
 // It is used to indicate an empty or uninitialized pointer, often as a sentinel value in arrays, strings, or linked lists.
 // Dereferencing a NULL pointer causes undefined behavior.
+// #include <stdio.h>
+// #include <string.h>
+
+// int main(void)
+// {
+//     char src[6] = "Hello";
+//     char dest[10]="Chiranjit";
+
+//     //strcpy(dest, src);
+//         strncpy(dest, src,10);
+
+
+//     printf("%s", dest);
+
+//     return 0;
+// }
+
+#include <stdio.h>
+#include<string.h>
+char str[100]="I am learning Embedded C";
+int len=0;
+
+int count=0;
+int fun_strln()
+{
+   while (str[len]!='\0')
+   {
+    /* code */
+    len++;
+  
+   }
+     return 0;
+}
+// int fun_rev()
+// {
+//     for(int i = len-1;i>=0;i--)
+//     {
+//         printf("%c",str[i]);
+//     }
+// }
+int fun_count()
+{
+  for (int i = len-1;i>=0;i--)
+  if(str[i] == ' ')
+  {
+    count++;
+  }
+  printf("No of Count is=%d",count);
+  return 0;
+}
+int main(void)
+{
+    fun_strln();
+    fun_count();
+    return 0;
+}

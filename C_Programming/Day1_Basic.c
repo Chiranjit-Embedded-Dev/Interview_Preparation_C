@@ -96,31 +96,15 @@
 
 // #include<stdio.h>
 
-// int main()
-// {
-//     /* code */
-//     char a=10;
-//     // unsigned char b=0;
-//     printf("%d\n",a++);
-
-//     return 0;
-// }
-
-
-#include <stdio.h>
 int main()
 {
-    int a=0;
-    int b=0;
-    int sum;
-    
-   printf("Please enter two number:");
-   scanf("%d %d",&a,&b);
-   sum = a+b;
-
-   printf("The Sum of two number is = %d",sum);
+    /* code */
+    char a=10;
+    // unsigned char b=0;
+    printf("%d\n",a++);
 
    return 0;
 
 }
+
 

@@ -187,31 +187,61 @@
 //     return 0;
 // }
 
+// 
+
 #include <stdio.h>
-int fun_bin(int num)
+unsigned int  num;// value 
+unsigned int nth;
+int fun_bin_conv()
 {
-    for(int n=7;n>=0;n--)
-    {
-        printf("%d",(num >> n) & 1);
-    }
-     printf("\n");
-}
-void check_bit(int num, int n)
-{
-    int bit;
-       fun_bin(num);
-    bit = (num >> n) & 1;
+printf("Please ether the number: ");
+scanf("%u",&num);
 
-    printf("%d bit = %d\n", n, bit);
-     fun_bin(num);
+for(int i=31 ;i>=0;i--)
+{
+    printf("%u",(num >> i)& 1);
+}
+printf("\n");
+return 0;
 }
 
-int main()
+// int fun_nth_bit_set()
+// {
+//     printf("Please enter the nth bit = ");
+//     scanf("%u",&nth);
+//     num |=(1U << nth);
+//     printf("THE update value is =%u \n",num);
+//     return 0;
+// }
+
+// int fun_nth_bit_toggle()
+// {
+// printf("Please enter the nth bit = ");
+//     scanf("%u",&nth);
+//     num ^=(1U << nth);
+//     printf("THE update value is =%u \n",num);
+//     return 0;
+// }
+int fun_find_bit(){
+
+printf("Please enter the nth bit = ");
+    scanf("%u",&nth);
+if((num & (1U << nth)) == 0)
 {
-    int num = 24;
+    printf("The nth Bit is 0");
 
-    check_bit(num, 4);
-    fun_bin(num);
+}
+else 
+{
+    printf("The nth Bit is 1");
 
+}
+}
+int main(void)
+{
+    fun_bin_conv();
+ // fun_nth_bit_set();
+ //   fun_nth_bit_toggle();
+    fun_find_bit();
     return 0;
 }

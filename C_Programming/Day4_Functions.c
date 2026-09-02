@@ -100,3 +100,41 @@
 //     printf(" Please enter a number for factriol n=%d is =%d", n, fact);
 //     return 0;
 // }
+// #include <stdio.h>
+
+// int fun_swap(int *a, int *b)
+// { 
+//     int temp;
+//     // temp = *a + *b;
+//     //   *a = temp - *a;
+//     //   *b = temp - *b;
+//     temp = *a;
+//       *a = *b;
+//       *b = temp;
+//      return 0;
+// }
+
+// int main(void)
+// {
+//     int a = 10;
+//     int b = 20;
+//     printf("Before Swap a = %d and b = %d \n",a,b);
+//     fun_swap(&a,&b);
+//     printf("After Swap a = %d and b = %d \n",a,b);
+//     return 0;
+// }
+#include <stdio.h>
+
+void fun(int x) 
+{
+     x = 100;
+     //printf("%d",x);
+     }
+
+int main(void) 
+{ 
+    int a = 10; 
+    fun(a); 
+    printf("%x\n", &a);
+     return 0; 
+    }
