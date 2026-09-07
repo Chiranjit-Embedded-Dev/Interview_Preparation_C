@@ -831,47 +831,137 @@
 // }
 
 /*P2.1 Program to find out the size and limits of data types*/
-#include<stdio.h>
-#include<limits.h>
-#include<float.h>
-int main(void)
-{
-	printf("sizeof(char) = %u\n",sizeof(char));
-	printf("sizeof(short) = %u\n",sizeof(short));
-	printf("sizeof(int) = %u\n",sizeof(int));
-	printf("sizeof(long) = %u\n",sizeof(long));
-	printf("sizeof(float) = %u\n",sizeof(float));
-	printf("sizeof(double) = %u\n",sizeof(double));
-	printf("sizeof(long double) = %u\n",sizeof(long double));
+// #include<stdio.h>
+// #include<limits.h>
+// #include<float.h>
+// int main(void)
+// {
+// 	printf("sizeof(char) = %u\n",sizeof(char));
+// 	printf("sizeof(short) = %u\n",sizeof(short));
+// 	printf("sizeof(int) = %u\n",sizeof(int));
+// 	printf("sizeof(long) = %u\n",sizeof(long));
+// 	printf("sizeof(float) = %u\n",sizeof(float));
+// 	printf("sizeof(double) = %u\n",sizeof(double));
+// 	printf("sizeof(long double) = %u\n",sizeof(long double));
 
-	printf("SCHAR_MIN = %d\n",SCHAR_MIN);
-	printf("SCHAR_MAX = %d\n",SCHAR_MAX);
-	printf("UCHAR_MAX = %d\n",UCHAR_MAX);
+// 	printf("SCHAR_MIN = %d\n",SCHAR_MIN);
+// 	printf("SCHAR_MAX = %d\n",SCHAR_MAX);
+// 	printf("UCHAR_MAX = %d\n",UCHAR_MAX);
 	
-	printf("SHRT_MIN = %d\n",SHRT_MIN);
-	printf("SHRT_MAX = %d\n",SHRT_MAX);
-	printf("USHRT_MAX = %u\n",USHRT_MAX);
+// 	printf("SHRT_MIN = %d\n",SHRT_MIN);
+// 	printf("SHRT_MAX = %d\n",SHRT_MAX);
+// 	printf("USHRT_MAX = %u\n",USHRT_MAX);
 		
-	printf("INT_MIN = %d\n",INT_MIN);
-	printf("INT_MAX = %d\n",INT_MAX);
-	printf("UINT_MAX = %u\n",UINT_MAX);
+// 	printf("INT_MIN = %d\n",INT_MIN);
+// 	printf("INT_MAX = %d\n",INT_MAX);
+// 	printf("UINT_MAX = %u\n",UINT_MAX);
 	
-	printf("LONG_MIN = %ld\n",LONG_MIN);
-    printf("LONG_MAX = %ld\n",LONG_MAX);
-    printf("ULONG_MAX = %lu\n",ULONG_MAX);
+// 	printf("LONG_MIN = %ld\n",LONG_MIN);
+//     printf("LONG_MAX = %ld\n",LONG_MAX);
+//     printf("ULONG_MAX = %lu\n",ULONG_MAX);
     
-	printf("FLT_MIN = %e\n",FLT_MIN);
-	printf("FLT_MAX = %e\n",FLT_MAX);
+// 	printf("FLT_MIN = %e\n",FLT_MIN);
+// 	printf("FLT_MAX = %e\n",FLT_MAX);
 
-	printf("DBL_MIN = %e\n",DBL_MIN);
-	printf("DBL_MAX = %e\n",DBL_MAX);
+// 	printf("DBL_MIN = %e\n",DBL_MIN);
+// 	printf("DBL_MAX = %e\n",DBL_MAX);
 
-	printf("LDBL_MIN = %e\n",LDBL_MIN);
-	printf("LDBL_MAX = %e\n",LDBL_MAX);
+// 	printf("LDBL_MIN = %e\n",LDBL_MIN);
+// 	printf("LDBL_MAX = %e\n",LDBL_MAX);
 
-	/*Number of digits of precision*/
-	printf("FLT_DIG = %d\n",FLT_DIG);
-	printf("DBL_DIG = %d\n",DBL_DIG);
-	printf("LDBL_DIG = %d\n",LDBL_DIG);
-	return 0;
-}
+// 	/*Number of digits of precision*/
+// 	printf("FLT_DIG = %d\n",FLT_DIG);
+// 	printf("DBL_DIG = %d\n",DBL_DIG);
+// 	printf("LDBL_DIG = %d\n",LDBL_DIG);
+// 	return 0;
+// }
+
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	printf("Hello World");
+// 	return 0;
+// }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	int _num = 0;
+//     printf("Please Enter a Number :");
+// 	scanf("%d",&_num);
+// 	printf("The Enter Number is : %d",_num);
+
+// 	return 0;
+// }
+
+// #include <stdio.h>
+
+// int fun_sum(int a,int b)
+// {
+// 	int sum = 0;
+// 	sum = a + b;
+// 	printf("Sum is = %d\n",sum);
+// 	return 0;
+// }
+
+// int fun_diff(int a,int b)
+// {
+// 	int diff = 0;
+// 	diff = a - b;
+// 	printf("Difference  is = %d\n",diff);
+//     return 0;
+// }
+
+// int fun_mul(int a,int b)
+// {
+// 	int mul = 0;
+// 	mul = a * b;
+// 	printf("Product is = %d\n",mul);
+//     return 0;
+// }
+// int main(void)
+// {
+// 	int x = 0;
+// 	int y = 0;
+// 	printf("Enter first number = ");
+// 	scanf("%d",&x);
+	
+// 	printf("Enter second number = ");
+// 	scanf("%d",&y);
+	
+// 	fun_sum(x,y);
+// 	fun_diff(x,y);
+// 	fun_mul(x,y);
+// 	return 0;
+// }
+
+
+// Write a C program that takes an integer from the user and determines whether the number is:
+
+// Positive
+// Negative
+// Zero
+
+// #include <stdio.h>
+// int main(void)
+// {   int num=0;
+// 	printf("Enter first number = ");
+// 	scanf("%d",&num);
+	
+// 	if(num==0)
+// 	{
+// 		printf("Enter number is 0");
+// 	}
+// 	else if(num>=0)
+// 	{
+// 		printf("Enter number is Positive");
+// 	} 
+// 	else
+// 		printf("Enter number is Negative");
+
+// 	return 0;
+// }
+
+//Write a C program to print the numbers 1 to 10 using a for loop.
+
