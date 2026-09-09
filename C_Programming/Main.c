@@ -965,3 +965,162 @@
 
 //Write a C program to print the numbers 1 to 10 using a for loop.
 
+// #include <stdio.h>
+// int main(void)
+// {
+// 	for(int i=1;i<=10;i++)
+// 	{
+// 		printf("%d \t",i);
+// 	}
+// 	return 0;
+// }
+
+// #include <stdio.h>
+// int main(void)
+// {    int sum =0;
+// 	for(int i=1;i<=10;i++)
+// 	{
+	 
+// 	  printf("%d \t",i);
+// 	  sum = sum + i ;
+      
+// 	}
+// 	printf("\n");
+// 	printf("%d \n",sum);
+// 	return 0;
+// }
+
+// .
+// #include <stdio.h>
+
+// int fun_swap(int *a,int *b)
+// {   
+// 	*a = *a + *b;
+//     *b = *a - *b;
+// 	*a = *a - *b;
+// 	return 0;
+// }
+
+// int main(void)
+// {
+// 	int x=10;
+// 	int y=20;
+//     fun_swap(&x,&y);
+// 	printf("%d %d",x,y);
+// 	return 0;
+// }
+
+//Without using strlen(), write a C program to find the length of a string using a pointer.
+
+// #include <stdio.h>
+// char str[100];
+// int len=0;
+// int i=0;
+// int fun_sringln(){
+// 	int i=0;
+//     while (str[i]!=0)
+//     {
+// 	/* code */
+// 	i++;
+// 	len=i;
+//     }
+//    printf("The String length is %d\n",i);
+//    return 0;
+// }
+// int fun_revers(){
+// printf("revers of Sring is =");
+// for(int i=(len -1);i>=0;i--)
+// {
+// printf("%c",str[i]);
+
+// }
+
+// }
+// int main(void)
+// {
+// 	printf("Please enter a string \n");
+// 	scanf("\n%s",str);
+// 	fun_sringln();
+// 	fun_revers();
+// 	return 0;
+// }
+
+// #include <stdio.h>
+// int num=0;
+// int bit;
+// int fun_dec_to_bin()
+// {    int count=0;
+//        for(int i=7;i>=0;i--)
+//     {  
+//         bit=((num >> i) & 1);
+//         // printf("%d",(num >> i) & 1);
+//        printf("%d",bit);
+// 	   if(bit==1)
+// 	{
+// 		count++;
+// 	}
+	
+//     }
+// 	printf("The 1s count in num =%d is =%d",num,count);
+//      printf("\n");
+// }
+
+
+// int main(void)
+// {
+    
+//     printf("PLease Enter a nember to find the total set bit");
+//     scanf("%d",&num);
+//     fun_dec_to_bin();
+//     return 0;
+// }
+
+
+//Write a C program to reverse an integer array in-place.
+
+// #include <stdio.h>
+
+// int fun_rev()
+// {
+// int arr[]={10, 25, 8, 45, 32, 45, 17};
+// int size = sizeof(arr)/sizeof(arr[0]);
+
+// for(int i=(size-1);i>=0;i--)
+// {
+// 	printf("%d\t",arr[i]);
+// }
+
+// }
+
+// int main(void)
+// {
+// 	fun_rev();
+// 	return 0;
+// }
+
+//Write a C function to find the largest element in an integer array.
+
+#include <stdio.h>
+int arr[]={10, 25, 8, 45, 32, 17};
+int size = sizeof(arr)/sizeof(arr[0]);
+int fun_largest_element()
+{
+int max=arr[0];
+for(int i=1;i<size;i++)
+{
+if (arr[i]>max)
+{
+	max=arr[i];
+	
+}
+
+}
+printf("The max number is =%d",max);
+return 0;
+}
+
+int main(void)
+{
+	fun_largest_element();
+	return 0;
+}

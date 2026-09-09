@@ -161,30 +161,30 @@
 //     return 0;
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-char str[100];
-int strln=0;
-int i;
+// char str[100];
+// int strln=0;
+// int i;
 
-int _Fun_Strln()
-{
-printf("Please Enter a String:");
-scanf("%s",&str);
-int i=0;
-for(i=0;str[i]!='\0';i++)
-{
-strln++;
-}
-
-
-// while (str[i] != '\0')
+// int _Fun_Strln()
 // {
-//     i++;
+// printf("Please Enter a String:");
+// scanf("%s",&str);
+// int i=0;
+// for(i=0;str[i]!='\0';i++)
+// {
+// strln++;
 // }
-// printf("Size of String is:%d",i);
-return 0;
-}
+
+
+// // while (str[i] != '\0')
+// // {
+// //     i++;
+// // }
+// // printf("Size of String is:%d",i);
+// return 0;
+// }
 
 // int _Str_rev()
 // {
@@ -197,9 +197,45 @@ return 0;
 
 //     return 0;
 // }
-int main(void)
-{
-    _Fun_Strln();
-    _Str_rev();
-    return 0;
-}
+// int main(void)
+// {
+//     _Fun_Strln();
+//     _Str_rev();
+// }
+
+// #include <stdio.h>
+// int arr[]={10, 25, 8, 45, 32, 45, 17};
+// int size = sizeof(arr)/sizeof(arr[0]);
+
+
+// int main(void)
+// {
+//     int largest = arr[0];
+//     int secondlargest = arr[0];
+//     //printf("%d",size); 
+//    for(int i=1;i<size;i++)
+//    {
+
+//     if( arr[i] > largest)
+//     {
+//      secondlargest=largest;
+//      largest=arr[i];
+//     }
+// else if ( arr[i] != largest && arr[i]>secondlargest)
+// {
+//     secondlargest=arr[i];
+// }
+
+//    //printf("%d",i);
+
+//    }
+//        printf("Largest = %d\n", largest);     
+//        printf("Second Largest = %d\n", secondlargest);
+//     return 0;
+// }
+
+
+// Write a C program to reverse an integer array in-place.
+
+
+
