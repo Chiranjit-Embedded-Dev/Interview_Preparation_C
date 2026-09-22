@@ -1100,27 +1100,40 @@
 
 //Write a C function to find the largest element in an integer array.
 
-#include <stdio.h>
-int arr[]={10, 25, 8, 45, 32, 17};
-int size = sizeof(arr)/sizeof(arr[0]);
-int fun_largest_element()
-{
-int max=arr[0];
-for(int i=1;i<size;i++)
-{
-if (arr[i]>max)
-{
-	max=arr[i];
+// #include <stdio.h>
+// int arr[]={10, 25, 8, 45, 32, 17};
+// int size = sizeof(arr)/sizeof(arr[0]);
+// int fun_largest_element()
+// {
+// int max=arr[0];
+// for(int i=1;i<size;i++)
+// {
+// if (arr[i]>max)
+// {
+// 	max=arr[i];
 	
-}
+// }
 
-}
-printf("The max number is =%d",max);
-return 0;
-}
+// }
+// printf("The max number is =%d",max);
+// return 0;
+// }
 
-int main(void)
-{
-	fun_largest_element();
-	return 0;
-}
+// int main(void)
+// {
+// 	fun_largest_element();
+// 	return 0;
+// }
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     char str[5] = "Hello";
+
+//     printf("%s", str);
+
+//     return 0;
+// }
+
+
